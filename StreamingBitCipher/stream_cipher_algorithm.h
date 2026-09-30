@@ -59,7 +59,7 @@ std::string StreamCipherAlgorithm::encrypt(std::string msg) {
     p = msg_in_bit_vector.begin();
     q = key_in_bit_vector.begin();
     r = cipher_in_bit_vector.begin();
-    s = cipher_in_bit_vector.begin(); s--;
+    s = cipher_in_bit_vector.end(); s--;
 
     // create loop
     while (p != msg_in_bit_vector.end()) {
@@ -100,7 +100,7 @@ std::string StreamCipherAlgorithm::decrypt(std::string cipher_text) {
     p = msg_in_bit_vector.begin();
     q = key_in_bit_vector.begin();
     r = cipher_in_bit_vector.begin();
-    s = cipher_in_bit_vector.begin(); s--;
+    s = cipher_in_bit_vector.end(); s--;
 
     while (p != msg_in_bit_vector.end()) {
         if (*q == 1) {
